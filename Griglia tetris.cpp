@@ -19,7 +19,7 @@ void stampa_griglia(char g[r][c]){
 	}
 }
 
-void crea_griglia(){
+void inizializza_griglia(){
 	char griglia[r][c];
 	for(int i=0;i<r;i++){
 		if(i==r-1){
@@ -59,7 +59,7 @@ void crea_griglia(){
 }
 
 int main(){
-	crea_griglia();
+	inizializza_griglia();
 	return(0);
 }
 
