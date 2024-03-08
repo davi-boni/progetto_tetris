@@ -1,0 +1,65 @@
+//Griglia Tetris
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+const int r=23;
+const int c=12;
+
+void stampa_griglia(char g[r][c]){
+	for(int i=0;i<r;i++){				//ultime due righe sono grafiche
+		cout<<endl;
+		for(int j=0;j<c;j++){
+			if(j==0 || j==1 || j==c-2 || j==c-1){
+				cout<<g[i][j];
+				if(j==1) cout<<" ";
+			}
+			else cout<<g[i][j]<<" ";
+		}
+	}
+}
+
+void crea_griglia(){
+	char griglia[r][c];
+	for(int i=0;i<r;i++){
+		if(i==r-1){
+			for(int z=0;z<c;z++){
+				if(z==0){
+					griglia[i][z]='<';
+					griglia[i][z+1]='|';
+					z++;
+				}
+				else if(z==c-2){
+					griglia[i][z]='|';
+					griglia[i][z+1]='>';
+					z++;
+				}
+				else griglia[i][z]='^';
+			}
+		}
+		else{
+			for(int j=0;j<c;j++){
+				if(j==0){
+					griglia[i][j]='<';
+					griglia[i][j+1]='|';
+					j++;
+				}
+				else if(j==c-2){
+					griglia[i][j]='|';
+					griglia[i][j+1]='>';
+					j++;
+				}
+				else{
+					griglia[i][j]='.';
+				}
+			}
+		}
+	}
+	stampa_griglia(griglia);
+}
+
+int main(){
+	crea_griglia();
+	return(0);
+}
+
