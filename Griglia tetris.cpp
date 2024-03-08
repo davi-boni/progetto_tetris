@@ -3,8 +3,17 @@
 #include <stdio.h>
 using namespace std;
 
-const int r=23;
-const int c=12;
+#define r 23
+#define c 12
+
+bool controlloUltimaRiga() { // verifica se l'ultima riga della matrice è piena
+	
+}
+
+void scorrimento() { // fa scorrere la griglia, eliminando l'ultima e aggiungendone una in cima
+	if(controlloUltimaRiga()) {
+		/*codice*/
+}
 
 void stampa_griglia(char g[r][c]){
 	for(int i=0;i<r;i++){				//ultime due righe sono grafiche
