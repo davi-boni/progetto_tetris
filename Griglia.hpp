@@ -1,5 +1,5 @@
 #include <iostream>
-//#include <ncurses.h>
+#include <ncurses.h>
 using namespace std;
 
 #define ROW 23
