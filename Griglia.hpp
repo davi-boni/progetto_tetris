@@ -9,6 +9,7 @@ class Griglia {
   protected:
     char matrice[ROW][COL];
   public:
+    Griglia();
     void inizializzazione();
     void stampa();
     bool controllo_ultima_riga();
