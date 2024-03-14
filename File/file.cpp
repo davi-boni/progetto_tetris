@@ -4,15 +4,6 @@ using namespace std;
 
 #include "file.hpp"
 
-// struct e typedef da mettere in .hpp
-
-struct node {
-  int val;
-  node* next;
-};
-
-typedef node* plist;
-
 void save_data(int points) {
   ofstream file;
   file.open("classifica.txt", ios::app);
@@ -37,7 +28,7 @@ plist addNode(int points) {
     head = new node;
     head->val = value;
     head->next = NULL;
-    return;
+    return head;
   }
 
   bool added = false;
@@ -61,4 +52,6 @@ plist addNode(int points) {
     n->next = head;
     head = n;
   }
+
+  return head;
 }
