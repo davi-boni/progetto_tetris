@@ -40,6 +40,19 @@ Griglia::Griglia() {
 	}
 }
 
+Griglia::stampa(){
+	for (int i = 0; i < r; i++) {
+		cout << endl;
+		for (int j = 0; j < c; j++) {
+			if (j == 0 || j == 1 || j == c-2 || j == c-1) {
+				cout << matrice[i][j];
+				if ( j == 1) cout << " ";
+			}
+			else cout << matrice[i][j] << " ";
+		}
+	}
+}
+
 bool Griglia::controllo_ultima_riga() {
   bool full = true;
   int j = 2;
