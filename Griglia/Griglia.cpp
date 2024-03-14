@@ -4,11 +4,40 @@
 using namespace std;
 
 Griglia::Griglia() {
-  for (int i = 0; i < ROW; i++) {
-    for (int j = 0; j < COL; j++) {
-      matrice[i][j] = m[i][j];
-    }
-  }
+  for (int i = 0; i < r; i++) {
+		if (i == ROW - 1) {
+			for (int j = 0; j < c; j++) {
+				if ( j == 0) {  
+					matrice[i][j] = '<';
+					matrice[i][j+1] = '|';
+					j++;
+				}
+				else if (j == COL - 2) {
+					matrice[i][j] = '|';
+					matrice[i][j+1] = '>';
+					j++;
+				}
+				else matrice[i][j] = '^';
+			}
+		}
+		else {
+			for (int j = 0; j < c; j++) {
+				if (j == 0) {
+					matrice[i][j] = '<';
+					matrice[i][j+1] = '|';
+					j++;
+				}
+				else if (j == c - 2) {
+					matrice[i][j] = '|';
+					matrice[i][j+1] = '>';
+					j++;
+				}
+				else {
+					matrice[i][j] = '.';
+				}
+			}
+		}
+	}
 }
 
 bool Griglia::controllo_ultima_riga() {
