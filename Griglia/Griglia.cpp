@@ -3,6 +3,14 @@
 #include "Griglia.hpp"
 using namespace std;
 
+Griglia::Griglia(char m[ROW][COL]) {
+  for (int i = 0; i < ROW; i++) {
+    for (int j = 0; j < COL; j++) {
+      matrice[i][j] = m[i][j];
+    }
+  }
+}
+
 bool Griglia::controllo_ultima_riga() {
   bool full = true;
   int j = 2;
