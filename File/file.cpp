@@ -15,7 +15,7 @@ void save_data(int points) {
 void load_data() {
   ifstream file;
   file.open("classifica.txt");
-  int pointse;
+  int points;
   plist head = NULL;
   
   while (file >> points) {
