@@ -1,0 +1,6 @@
+- generazione griglia vuota
+- generazione tetramini
+- scorrimento tetramini
+- collisioni (laterale, superiore, inferiore)
+- eliminazione riga piena
+- game over
